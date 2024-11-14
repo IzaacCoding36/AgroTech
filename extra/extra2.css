@@ -1,8 +1,9 @@
-html {background: #020411e7; cursor: default; font-family:'Orbitron';}
+html {background: #051a00; background-image: url('background.png'); cursor: default; font-family:'Orbitron'; filter: hue-rotate(20deg);}
 
 h1 {color: lime;}
 h2 {color: lime;}
 p {color: #e7e7e7e7;}
+hr {box-shadow: 0px 0px 5px lime;}
 
 a {color: blue; text-decoration: none; transition: color 0.3s;}
 

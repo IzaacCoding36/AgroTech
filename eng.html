@@ -1,4 +1,4 @@
-<!-- Agrinho Project 2024 -->
+<!-- AgroTech -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,17 +15,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
   <base href="index.html">
-  <title>Agrinho Project 2024</title>
+  <title>AgroTech</title>
 </head>
 <body>
   <center>
   <header id="header">
-    <p id="logo">Agrinho Project</p>
+    <p id="logo">AgroTech</p>
       <nav id="nav">
+        <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hambuguer"></span>
+        </buttton>
         <ul id="menu" role="menu">
           <li><a href="eng2.html">Theme: Light</a></li>
-          <li><a href="index.html">Language: English</a></li>
           <li><a href="extra/info(eng).html">Info</a></li>
           <li><a href="extra/references.html">References</a></li>
         </ul>
@@ -34,8 +44,24 @@
   <section>
   <div>
     <h1 class="T1">Agrotech: The Future of the Field</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Languages</button>
+      <div class="dropdown-content">
+        <a href="index.html">Brazillian Portuguese</a>
+        <a class="eng">English</a>
+        <a class="morelang">More languages</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Filters</button>
+      <div class="dropdown-content">
+        <a class="filter">Normal</a>
+        <a class="filter2">Sepia</a>
+        <a class="filter3">Grey</a>
+      </div>
+    </div>
     <h6 id="A1">Hello, welcome to this website, here, you will see several concepts about the countryside and its branches that correlate with the city, reflecting and opening wide ranges of opportunities for those who are interested in seeking an innovative future.</h6>
-    <h6 id="A1">Let's start!</h6>
+    <h6 id="A1">Let's start?</h6>
   </div>
   <div>
     <hr>
@@ -76,10 +102,12 @@
     <p id="Te1">I appreciate your attention.</p>
   </div>
   <div>
-    <p id="Te2">®2024 Agrinho Project, <a class="links" href="https://github.com/IzaacCoding36">@IzaacCoding36</a>. All rights reserved. Content subject to availability.</p>
+    <p id="Te2">®2024 AgroTech, <a class="links" href="https://github.com/IzaacCoding36">@IzaacCoding36</a>. All rights reserved. Content subject to availability.</p>
     <p id="Te2">This is a website where relations between the countryside and the city and their developments together in relation to the project developed are discussed.</p>
     </center>
   </div>
 </section>
 </body>
+<script src="./js/menu.js"></script>
+<script src="./js/buttons.js"></script>
 </html>
