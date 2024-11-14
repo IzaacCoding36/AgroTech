@@ -1,12 +1,12 @@
-# Projeto-agrinho2024
+# AgroTech
 
-Esse repositório será utilizado para a publicação e desenvolvimento do meu projeto para o concurso Agrinho de Programação de 2024.
+Esse repositório foi utilizado para a publicação e desenvolvimento do meu projeto para o concurso [Agrinho](https://www.sistemafaep.org.br/agrinho/) de Programação de 2024.
 
 Nesse site será debatido alguns assuntos relevantes com o tema, apresentando também imagens estilizadas de uma maneira mais simples e básica porém objetiva.
 
 ## Elementos interativos
 
-Esse site apresenta botões que exibem informações sobre a página, referências, alteração de tema da página como claro ou escuro, e por fim, a linguagem em português ou inglês.
+Esse site apresenta botões que exibem informações sobre a página, referências, alteração de tema da página como claro ou escuro e alguns filtros, e por fim, a linguagem em português ou inglês.
 
 ## Textos
 
@@ -23,3 +23,5 @@ Para mais informações, confira a aba "Info" localizada no canto superior direi
 **Espero que você leia com atenção e aproveite o conteúdo!**
 
 *Tema: Agrinho, do campo à cidade, colhendo oportunidades*
+
+_**Este projeto foi premiado, sendo classificado em primeiro lugar regional de Curitiba! Representando também o Colégio Estadual Hasdrubal Bellegard**_
