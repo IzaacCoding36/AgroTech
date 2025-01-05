@@ -1,4 +1,4 @@
-html {background: #051a00; background-image: url('background.png'); background-size: 100%; cursor: default; font-family:'Orbitron'; filter: hue-rotate(20deg);}
+html {background: #051a00; background-color: #051a00; background-image: url('background.png'); background-size: 100%; cursor: default; font-family:'Orbitron'; filter: hue-rotate(20deg);}
 
 h1 {color: lime;}
 h2 {color: lime;}
