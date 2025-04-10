@@ -6,10 +6,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="edge">
   <meta name="author" content="IzaacCoding36">
-  <meta name="description" content="Information about the website with the theme 'Agrinho, from the countryside to the city, harvesting opportunities.'>
+  <meta name="description" content="Information about the website with the theme 'Agrinho, from the countryside to the city, harvesting opportunities.">
   <meta name="keywords" content="Development, Info.">
   <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-  <link rel="stylesheet" href="extra.css">
+  <link rel="stylesheet" href="css/extra.css">
+  <link rel="stylesheet" href="css/menu2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
@@ -27,7 +28,43 @@
 </head>
 <body>
   <center>
+    <header id="header">
+    <p id="logo">AgroTech</p>
+      <nav id="nav">
+        <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hambuguer"></span>
+        </buttton>
+        <ul id="menu" role="menu">
+          <li><a href="https://agrotech-agr.vercel.app/eng.html">Main Page</a></li>
+          <li><a class="here">Info</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </header>
     <h1>Information about the website</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Languages</button>
+      <div class="dropdown-content">
+        <a href="info.html">Brazillian Portuguese</a>
+        <a class="eng">English</a>
+        <a class="morelang">More languages</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Filters</button>
+      <div class="dropdown-content">
+        <a class="filter">Normal</a>
+        <a class="filter2">Sepia</a>
+        <a class="filter3">Grey</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Themes</button>
+      <div class="dropdown-content">
+        <a class="theme">Light</a>
+        <a href="info(eng2).html">Dark</a>
+      </div>
+    </div>
     <hr>
     <p>This is a website where relationships between the countryside and the city and their development together are discussed.</p>
     <p>This website was the project classified and awarded first place in the region of Curitiba in the programming competition <a href="https://www.sistemafaep.org.br/agrinho/">Agrinho</a> of 2024, representing the Colégio Estadual Hasdrubal Bellegard, in partnership with FAEP, SENAR, Rural Union and SEED of Paraná</p>
@@ -37,12 +74,12 @@
     <hr>
     <h2>Versions</h2>
     <hr>
-    <p>Last website update: 05/jan/2025</p>
+    <p>Last website update:  10/apr/2025</p>
     <p>Website developed and published in: 27/apr/2024</p>
     <hr>
     <p>®2025 AgroTech, <a href="https://github.com/IzaacCoding36">@IzaacCoding36</a>. All rights reserved. Content subject to availability.</p>
-    <hr>
-    <h4><a href="https://agrotech-agr.vercel.app/eng.html">Return</a></h4>
   </center>
 </body>
+<script src="js/menu2.js"></script>
+<script src="js/buttons2.js"></script>
 </html>

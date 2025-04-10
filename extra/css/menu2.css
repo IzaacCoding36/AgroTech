@@ -13,21 +13,25 @@ ul {margin: 0;}
        width: 100px;
        padding: 10px;
        box-shadow: 0px 0px 15px cyan;
-       text-shadow: 0px 0px 15px blue;
+       text-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue;
        border-radius: 50px;
+       border: 2px outset cyan;
        cursor: default;}
 /* nome do Projeto no header */
 
 #header {box-sizing: border-box;
-         height: 10px;
+         height: 50px;
+         top: 0px;
+         right: 0px;
          width: 100%;
          padding: 1rem;
          display: flex;
          box-shadow: 0px 0px 15px cyan;
-         border: solid 2px black;
+         border: outset 2px black;
          align-items: center;
          justify-content: space-between;
          background: #157205e7;
+         background: linear-gradient(90deg, #157205e7 0%, #157205e7 50%, #030012 100%);
          position: fixed;
          top: -3px;
          z-index: 2;}
@@ -40,10 +44,30 @@ ul {margin: 0;}
 
 #menu a {display: block;
          font-size: 15px;
-         font-weight: bold;
+         color: white;
          text-decoration: none;
+         transition: color 0.3s;
+         font-weight: bold;
+         transition: all 0.3s ease;
+         position: relative;
          padding: .5rem;}
 /* definições para os links do menu */
+
+#menu a:hover {color: cyan; text-shadow: 0 0 5px cyan; transition: color 0.3s;}
+/* definições quando o mouse ou toque estiver em cima dos links do menu superior */
+
+#menu a::after {content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background: cyan;
+                transition: width 0.3s ease;}
+/* definições de detalhamento e espaçamento entre botões do menu superior */
+
+#menu a:hover::after {width: 100%;}
+/* definições quando o mouse ou toque estiver em cima dos botões do menu superior */
 
 #btn-mobile {display: none;
              color: white;
@@ -59,7 +83,7 @@ ul {margin: 0;}
   #menu {position: absolute; width: 100%; top: 50px; right: -3px; display: block; background-color: #313131c0; height: 0; z-index: 1000;
          transition: .6s; visibility: hidden; overflow-y: hidden;}
   #nav.active #menu {display: block; visibility: visible; height: calc(100vh - 30px); overflow-y: auto;}
-  #menu a {padding: 1rem 0; font-size: 15px; text-decoration: none; border-bottom: 2px solid white; width: 100%;}
+  #menu a {padding: 1rem 0; font-size: 15px; text-decoration: none; border-bottom: 2px outset cyan; background: linear-gradient(to right, transparent, black, transparent); width: 100%;}
   #btn-mobile {display: flex; padding: .5rem 1rem; font-size: 1rem; border: none; cursor: pointer; gap: .5rem;}
   #hambuguer {border-top: 2px solid; width: 20px; transition: color 0.1s;}
   #hambuguer:hover {color: cyan; transition: color 0.1s;}

@@ -1,7 +1,7 @@
 // AgroTech - Buttons //
 
 document.querySelector('.filter').addEventListener('click', () => {
-    document.querySelector('html').style.setProperty('filter', 'none');
+    document.querySelector('html').style.setProperty('filter', 'hue-rotate(30deg)');
     document.querySelector('html').style.setProperty('background-color', '#001403');
 });
 

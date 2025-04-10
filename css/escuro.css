@@ -56,23 +56,29 @@ div {padding-bottom: 45px;}
                      transition: background-color 0.3s, box-shadow 0.3s;}
 /* texto do botão de linguagens e filtros */
 
-.dropdown-content a:hover {background-color: yellowgreen;
-                           color: black;
-                           box-shadow: 0px 2px 5px black, -2px 0px 5px black;
+.dropdown-content a:hover {background-color: green;
+                           color: white;
+                           box-shadow: 0px 2px 5px white, -2px 0px 5px white;
                            transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
 /* efeitos de hover no texto do botão de linguagens e filtros */
 
 .dropdown:hover .dropdown-content {display: block;}
 /* display do conteúdo do botão de linguagens e filtros */
 
-.dropdown:hover .dropbtn {background-color: yellowgreen;
-                          color: black;
-                          box-shadow: 0px 2px 5px black, -2px 0px 5px black;
+.dropdown:hover .dropbtn {background-color: green;
+                          color: white;
+                          box-shadow: 0px 2px 5px white, -2px 0px 5px white;
                           transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
 /* botão de linguagens e filtros quando a caixa de links estiver aberta */
 
-hr {color: #e7e7e7e7; position: relative; top: 40px; box-shadow: 0px 0px 5px white;}
+hr {box-shadow: 0px 0px 5px white; background: linear-gradient(to right, transparent, white, transparent); border: none; height: 1px; animation: pulse 2s infinite; position: relative; top: 40px;}
 /* definições para separações (em linhas) */
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 5px white; }
+    50% { box-shadow: 0 0 15px white; }
+}
+/* animação de pulsação para linhas */
 
 button {position: relative; top: 40px; 
         background-color: black;
@@ -96,10 +102,10 @@ button:hover {background-color: yellowgreen;
 strong {text-shadow: 0px 0px 15px white; color: white;}
 /* aplicação de destaques */
 
-a {color: white; transition: color 0.3s;}
+a {color: white; transition: color 1s;}
 /* padrão de cor branca para links primários */
 
-a:hover {color: cyan; transition: color 0.3s;}
+a:hover {color: cyan; transition: color 1s;}
 /* padrão de cor ciano para links primários quando clicados */
 
 .T1 {color: cyan; background: #000000aa;
@@ -109,6 +115,7 @@ a:hover {color: cyan; transition: color 0.3s;}
      cursor: default;
      width: 80%;
      border-radius: 50px;
+     border: 3px outset cyan;
      max-width: 900px;
      position: relative; top: 40px;
      font-size: 30px;}
@@ -121,6 +128,7 @@ a:hover {color: cyan; transition: color 0.3s;}
      cursor: default;
      width: 55%;
      border-radius: 50px;
+     border: 3px outset yellow;
      max-width: 700px;
      position: relative; top: 40px;
      font-size: 21px;}
@@ -133,6 +141,7 @@ a:hover {color: cyan; transition: color 0.3s;}
      cursor: default;
      width: 55%;
      border-radius: 50px;
+     border: 3px outset white;
      max-width: 700px;
      position: relative; top: 40px;
      font-size: 21px;}
@@ -152,15 +161,16 @@ a:hover {color: cyan; transition: color 0.3s;}
  cursor: default;
  width: 55%;
  border-radius: 50px;
+ border: 3px outset lime;
  max-width: 700px;
  position: relative; top: 40px;
  font-size: 21px;}
 /* quarto título */
 
-.links {color: lime; transition: color 0.3s;}
+.links {color: lime; transition: color 1s;}
 /* padrão de cor cinza para links secundários */
 
-.links:hover {color: green; transition: color 0.3s;}
+.links:hover {color: green; transition: color 1s;}
 /* padrão de cor ciano para links secundários quando clicados */
 
 #A1 {color: #e7e7e7e7; cursor: default;
@@ -174,7 +184,7 @@ a:hover {color: cyan; transition: color 0.3s;}
      width: 30%; height: 25%;
      border-radius: 50px;
      transition: filter 1s ease;
-     border: solid 2px #020411e7;}
+     border: outset 3px #020411e7;}
 /* estilização da imagem de relação campo-cidade */
 
 #I1:hover {filter: brightness(1.2); transition: filter 1s ease;}
@@ -192,7 +202,7 @@ a:hover {color: cyan; transition: color 0.3s;}
      width: 30%; height: 25%;
      border-radius: 50px;
      transition: filter 1s ease;
-     border: solid 2px #020411e7;}
+     border: outset 3px #020411e7;}
 /* estilização da imagem de oportunidades */
 
 #I2:hover {filter: brightness(1.2); transition: filter 1s ease;}
@@ -204,7 +214,7 @@ a:hover {color: cyan; transition: color 0.3s;}
      width: 30%; height: 25%;
      border-radius: 50px;
      transition: filter 1s ease;
-     border: solid 2px black;}
+     border: outset 3px black;}
 /* estilização da imagem de inovação */
 
 #I3:hover {filter: brightness(1.2); transition: filter 1s ease;}
@@ -220,7 +230,7 @@ a:hover {color: cyan; transition: color 0.3s;}
 
 /* Proporções Extras */
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
   html {background-size: 200%;}
   button {padding: 5px; font-size: 14px;}
   .T1,.T2,.T3,.T4 {border-radius: 0px;}

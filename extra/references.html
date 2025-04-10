@@ -6,10 +6,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="edge">
   <meta name="author" content="IzaacCoding36">
-  <meta name="description" content="References about the website with the theme 'Agrinho, from the countryside to the city, harvesting opportunities.'>
+  <meta name="description" content="References about the website with the theme 'Agrinho, from the countryside to the city, harvesting opportunities.">
   <meta name="keywords" content="Development, References.">
   <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-  <link rel="stylesheet" href="extra.css">
+  <link rel="stylesheet" href="css/extra.css">
+  <link rel="stylesheet" href="css/menu2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
@@ -27,7 +28,43 @@
 </head>
 <body>
   <center>
+    <header id="header">
+    <p id="logo">AgroTech</p>
+      <nav id="nav">
+        <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hambuguer"></span>
+        </buttton>
+        <ul id="menu" role="menu">
+          <li><a href="https://agrotech-agr.vercel.app/eng.html">Main Page</a></li>
+          <li><a href="info(eng).html">Info</a></li>
+          <li><a class="here">References</a></li>
+        </ul>
+      </nav>
+    </header>
     <h1>References</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Languages</button>
+      <div class="dropdown-content">
+        <a href="referencias.html">Brazillian Portuguese</a>
+        <a class="eng">English</a>
+        <a class="morelang">More languages</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Filters</button>
+      <div class="dropdown-content">
+        <a class="filter">Normal</a>
+        <a class="filter2">Sepia</a>
+        <a class="filter3">Grey</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Themes</button>
+      <div class="dropdown-content">
+        <a class="theme">Light</a>
+        <a href="references2.html">Dark</a>
+      </div>
+    </div>
     <hr>
     <p><strong>Page text font:</strong> Orbitron - <a href="https://fonts.google.com/specimen/Orbitron?query=orbitron">Google Fonts</a></p>
     <p><strong>Images:</strong> the images in this website are mostly AI-generated, via the website <a href="https://www.imagine.art/">Imagine.art</a> and edited using the image editing program/app <a href="https://krita.org/en/">Krita.</a></p>
@@ -36,8 +73,8 @@
     <p><strong>extra:</strong> <a href="https://acoes-transformadoras.vercel.app/English.html">Transformative Actions</a></p>
     <hr>
     <p>®2025 AgroTech, <a href="https://github.com/IzaacCoding36">@IzaacCoding36</a>. All rights reserved. Content subject to availability.</p>
-    <hr>
-    <h4><a href="https://agrotech-agr.vercel.app/eng.html">Return</a></h4>
   </center>
 </body>
+<script src="js/menu2.js"></script>
+<script src="js/buttons2.js"></script>
 </html>
