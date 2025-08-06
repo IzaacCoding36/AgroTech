@@ -1,240 +1,440 @@
-/* AgroTech */
+/* AgroTech - Modern Design */
 
 /*-------------------------------------------*/
 
-html {background: #fcf4b3e7;
-      background-repeat: repeat;
-      background-color: #fcf4b3e7;
-      background-image: url("background2.png");
-      background-size: 100%;
-      font-family:'Orbitron', sans-serif;
-      align-items: center;
-      font-weight: bold;
-      transition: filter 1s ease;
-      font-size: 25px;}
-/* definição da cor de fundo, fontes e demais parâmetros do html */
+/* CSS Variables for consistent color palette */
+:root {
+  --primary-cyan: #00FFFF;
+  --primary-yellow: #FFFF00;
+  --primary-lime: #00FF00;
+  --primary-blue: #0000FF;
+  --dark-blue: #040492;
+  --background-primary: #fcf4b3e7;
+  --background-dark: #000000aa;
+  --text-primary: #000000;
+  --text-light: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --border-radius: 20px;
+  --transition: all 0.3s ease;
+}
 
-body {margin: 0px; padding: 0px;}
-/* definição de espaçamento do conteúdo contido no body da página */
+* {
+  box-sizing: border-box;
+}
 
-div {padding-bottom: 45px;}
-/* definição de espaçamento entre as seções da página */
+html {
+  background: var(--background-primary);
+  background-repeat: repeat;
+  background-color: var(--background-primary);
+  background-image: url("background2.png");
+  background-size: 100%;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  transition: filter 1s ease;
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
 
-.dropbtn {background-color: black;
-          color: white;
-          padding: 7px;
-          font-size: 16px;
-          font-weight: bold;
-          border-radius: 0px;
-          box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-          transition: background-color 0.3s, box-shadow 0.3s;
-          border: outset 2px yellowgreen;}
-/* definição do estilo de botões de linguagens e filtros */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-.dropdown {position: relative;
-           display: inline-block;
-           cursor: default;}
-/* definição do botão de linguagem e filtros */
+/* Modern container and layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px 20px;
+  flex: 1;
+}
 
-.dropdown-content {display: none;
-                   position: absolute;
-                   top: 75px;
-                   background-color: black;
-                   min-width: 100px;
-                   box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-                   z-index: 1;}
-/* conteúdo do botão de linguagens e filtros */
+/* Hero section */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
-.dropdown-content a {color: white;
-                     padding: 1px 1px;
-                     font-size: 15px;
-                     font-weight: bold;
-                     text-decoration: none;
-                     border: solid 1px yellowgreen;
-                     box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-                     display: block;
-                     transition: background-color 0.3s, box-shadow 0.3s;}
-/* texto do botão de linguagens e filtros */
+.controls-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
 
-.dropdown-content a:hover {background-color: green;
-                           color: white;
-                           box-shadow: 0px 2px 5px white, -2px 0px 5px white;
-                           transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
-/* efeitos de hover no texto do botão de linguagens e filtros */
+.intro {
+  max-width: 800px;
+  margin: 40px auto;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
-/* display do conteúdo do botão de linguagens e filtros */
+/* Content sections */
+.content-section {
+  margin-bottom: 80px;
+  text-align: center;
+}
 
-.dropdown:hover .dropbtn {background-color: green;
-                          color: white;
-                          box-shadow: 0px 2px 5px white, -2px 0px 5px white;
-                          transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
-/* botão de linguagens e filtros quando a caixa de links estiver aberta */
+.content-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px var(--shadow-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
 
-hr {box-shadow: 0px 0px 5px black; background: linear-gradient(to right, transparent, black, transparent); border: none; height: 1px; animation: pulse 2s infinite; position: relative; top: 40px;}
-/* definições para separações (em linhas) */
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+.text-content {
+  max-width: 100%;
+}
+
+/* Modern section dividers */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--primary-cyan), transparent);
+  border: none;
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--primary-cyan);
+  animation: pulse 3s infinite;
+}
 
 @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 5px black; }
-    50% { box-shadow: 0 0 15px black; }
+  0%, 100% { 
+    box-shadow: 0 0 5px var(--primary-cyan);
+    opacity: 0.7;
+  }
+  50% { 
+    box-shadow: 0 0 20px var(--primary-cyan);
+    opacity: 1;
+  }
 }
-/* animação de pulsação para linhas */
 
-button {position: relative; top: 40px; 
-        background-color: black;
-        color: white;
-        border: outset 2px yellowgreen;
-        border-radius: 25px;
-        box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-        padding: 9px;
-        font-size: 15px;
-        font-weight: bold;
-        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-        cursor: pointer;}
-/* estilização de botão */
-
-button:hover {background-color: yellowgreen;
-              box-shadow: 0px 2px 5px black, -2px 0px 5px black;
-              transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-              color: black;}
-/* efeitos ao mirar o mouse no botão */
-
-strong {text-shadow: 0px 0px 15px black;}
-/* aplicação de destaques */
-
-a {color: white; transition: color 0.3s;}
-/* padrão de cor branca para links primários */
-
-a:hover {color: cyan; transition: color 0.3s;}
-/* padrão de cor ciano para links primários quando clicados */
-
-.T1 {color: cyan; background: #000000aa;
-     box-shadow: 0px 0px 15px cyan;
-     text-shadow: 0px 0px 15px blue;
-     padding: 10px;
-     cursor: default;
-     width: 80%;
-     border-radius: 50px;
-     border: 3px outset cyan;
-     max-width: 900px;
-     position: relative; top: 40px;
-     font-size: 30px;}
-/* título principal */
-
-.T2 {color: yellow; background: #040492;
-     box-shadow: 0px 5px 15px yellow, -5px 0px 15px orange;
-     text-shadow: 0px 0px 15px orange;
-     padding: 10px;
-     cursor: default;
-     width: 55%;
-     border-radius: 50px;
-     border: 3px outset yellow;
-     max-width: 700px;
-     position: relative; top: 40px;
-     font-size: 21px;}
-/* título secundário */
-
-.T3 {color: white; background: #040492;
-     box-shadow: 0px 5px 15px blue, -5px 0px 15px teal;
-     text-shadow: 0px 0px 15px cyan;
-     padding: 10px;
-     cursor: default;
-     width: 55%;
-     border-radius: 50px;
-     border: 3px outset white;
-     max-width: 700px;
-     position: relative; top: 40px;
-     font-size: 21px;}
-/* terceiro título */
-
-.Topicos {color: black; position: relative;
-          position: relative; top: 40px;
-          font-size: 15px;
-          padding: 15px;
-          cursor: default; width: 90%;}
-/* estilização de tópicos gerais */
-
-.T4 {color: lime; background: #040492;
-     box-shadow: 0px 5px 15px lime, -5px 0px 15px yellow;
-     text-shadow: 0px 0px 15px white;
-     padding: 10px;
-     cursor: default;
-     width: 55%;
-     border-radius: 50px;
-     border: 3px outset lime;
-     max-width: 700px;
-     position: relative; top: 40px;
-     font-size: 21px;}
-/* quarto título */
-
-.links {color: blue; transition: color 1s;}
-/* padrão de cor cinza para links secundários */
-
-.links:hover {color: lime; transition: color 1s;}
-/* padrão de cor ciano para links secundários quando clicados */
-
-#A1 {color: black; cursor: default;
-     width: 90%;
-     position: relative; top: 40px;}
-/* apresentação do projeto */
-
-#I1 {position: relative; top: 40px;
-     cursor: default;
-     box-shadow: 0px 5px 15px yellow, -5px 0px 15px orange;
-     width: 30%; height: 25%;
-     border-radius: 50px;
-     transition: filter 1s ease;
-     border: outset 3px black;}
-/* estilização da imagem de relação campo-cidade */
-
-#I1:hover {filter: brightness(1.2); transition: filter 1s ease;}
-/* brilho de imagem */
-
-#Te1 {color: black; position: relative;
-      position: relative; top: 40px;
-      font-size: 15px;
-      cursor: default; width: 90%;}
-/* estilização do texto de relação campo-cidade */
-
-#I2 {position: relative; top: 40px;
-     cursor: default;
-     box-shadow: 0px 5px 15px blue, -5px 0px 15px teal;
-     width: 30%; height: 25%;
-     border-radius: 50px;
-     transition: filter 1s ease;
-     border: outset 3px black;}
-/* estilização da imagem de oportunidades */
-
-#I2:hover {filter: brightness(1.2); transition: filter 1s ease;}
-/* brilho de imagem */
-
-#I3 {position: relative; top: 40px;
-     cursor: default;
-     box-shadow: 0px 5px 15px lime, -5px 0px 15px yellow;
-     width: 30%; height: 25%;
-     border-radius: 50px;
-     transition: filter 1s ease;
-     border: outset 3px black;}
-/* estilização da imagem de inovação */
-
-#I3:hover {filter: brightness(1.2); transition: filter 1s ease;}
-/* brilho de imagem */
-
-#Te2 {color: black; 
-      cursor: default;
-      position: relative; top: 40px;
-      font-size: 15px; width: 90%;}
-/* fonte matriz da página e políticas de privacidade/termos de serviço, etc */
-
-/*-------------------------------------------*/
-
-/* Proporções Extras */
-
-@media screen and (max-width: 700px){
-  html {background-size: 200%;}
-  button {padding: 5px; font-size: 14px;}
-  .T1,.T2,.T3,.T4 {border-radius: 0px;}
-  .Topicos {text-align: left;}
-  #I1,#I2,#I3 {width: 50%; height: 50%; border-radius: 0px;}
+/* Modern dropdown styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
-/* definições para mobile-first, alterando o tamanho das imagens para uma melhor visão do conteúdo */
+
+.dropbtn {
+  background: linear-gradient(135deg, var(--text-primary), #333);
+  color: var(--text-light);
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3), 0 2px 8px rgba(255, 255, 0, 0.2);
+  transition: var(--transition);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dropbtn:hover {
+  background: linear-gradient(135deg, #00AA00, var(--primary-lime));
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background-dark);
+  backdrop-filter: blur(10px);
+  min-width: 200px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 32px var(--shadow-color);
+  z-index: 1000;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.dropdown-content a {
+  color: var(--text-light);
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  transition: var(--transition);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background: linear-gradient(135deg, var(--primary-lime), var(--primary-cyan));
+  color: var(--text-primary);
+  transform: translateX(5px);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Modern button styling */
+button, .cta-button {
+  background: linear-gradient(135deg, var(--text-primary), #333);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover, .cta-button:hover {
+  background: linear-gradient(135deg, var(--primary-lime), #66ff66);
+  color: var(--text-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.external-link {
+  text-decoration: none;
+}
+
+/* Typography improvements */
+.T1 {
+  color: var(--primary-cyan);
+  background: var(--background-dark);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px var(--primary-cyan);
+  text-shadow: 0 0 20px var(--primary-blue);
+  padding: 25px 40px;
+  margin: 0 auto 40px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--primary-cyan);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.T2, .T3, .T4 {
+  padding: 20px 30px;
+  margin: 0 auto 30px;
+  width: 80%;
+  max-width: 700px;
+  border-radius: var(--border-radius);
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.T2 {
+  color: var(--primary-yellow);
+  background: var(--dark-blue);
+  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.3);
+  text-shadow: 0 0 15px orange;
+  border: 2px solid var(--primary-yellow);
+}
+
+.T3 {
+  color: var(--text-light);
+  background: var(--dark-blue);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+  text-shadow: 0 0 15px var(--primary-cyan);
+  border: 2px solid var(--text-light);
+}
+
+.T4 {
+  color: var(--primary-lime);
+  background: var(--dark-blue);
+  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
+  text-shadow: 0 0 15px var(--text-light);
+  border: 2px solid var(--primary-lime);
+}
+
+/* Text styling */
+#A1, #Te1 {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 20px auto;
+  max-width: 900px;
+  text-align: left;
+}
+
+#A1 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* List styling */
+.benefits-list {
+  text-align: left;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0;
+}
+
+.Topicos {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-cyan);
+  backdrop-filter: blur(5px);
+  transition: var(--transition);
+}
+
+.Topicos:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+/* Image styling */
+#I1, #I2, #I3 {
+  width: min(400px, 80%);
+  height: auto;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border: 3px solid var(--text-primary);
+  margin: 30px auto;
+  display: block;
+}
+
+#I1 {
+  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.4);
+}
+
+#I2 {
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
+}
+
+#I3 {
+  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.4);
+}
+
+#I1:hover, #I2:hover, #I3:hover {
+  filter: brightness(1.1) contrast(1.1);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+/* Link styling */
+a {
+  color: var(--primary-cyan);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-lime);
+  text-shadow: 0 0 5px currentColor;
+}
+
+.links {
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+.links:hover {
+  color: var(--primary-lime);
+}
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(4, 4, 146, 0.8));
+  backdrop-filter: blur(10px);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: auto;
+  border-top: 2px solid var(--primary-cyan);
+}
+
+#Te2 {
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 10px auto;
+  max-width: 900px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  html {
+    background-size: 200%;
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 80px 15px 15px;
+  }
+  
+  .controls-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .dropbtn {
+    padding: 10px 15px;
+    font-size: 12px;
+    width: 200px;
+  }
+  
+  .T1, .T2, .T3, .T4 {
+    border-radius: 10px;
+    padding: 15px 20px;
+  }
+  
+  .content-card {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+  
+  #I1, #I2, #I3 {
+    width: 90%;
+    border-radius: 10px;
+  }
+  
+  .Topicos {
+    padding: 15px;
+    margin: 15px 0;
+  }
+}
