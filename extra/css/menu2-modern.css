@@ -1,78 +1,74 @@
-/* Header AgroTech - Modern Menu */
+/* Header AgroTech - Modern Design */
 
 /*-------------------------------------------*/
 
-/* CSS Variables for consistent styling */
-:root {
-  --primary-cyan: #00FFFF;
-  --primary-lime: #00FF00;
-  --primary-blue: #0000FF;
-  --text-light: #ffffff;
-  --background-dark: #000000aa;
-  --shadow-color: rgba(0, 0, 0, 0.3);
-  --border-radius: 20px;
-  --transition: all 0.3s ease;
-  --fast-transition: 0.2s; /* Fast menu transition */
-}
-
 ul {
   margin: 0;
+  padding: 0;
 }
 
-/* Logo styling */
 #logo {
   font-size: 18px;
-  font-weight: bold;
-  background: var(--background-dark);
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   color: var(--primary-cyan);
-  text-shadow: 0 0 15px var(--primary-blue);
-  width: 120px;
+  text-shadow: 0 0 15px var(--primary-lime);
   padding: 12px 20px;
-  box-shadow: 0 0 20px var(--primary-cyan);
-  border-radius: 50px;
+  border-radius: 25px;
   border: 2px solid var(--primary-cyan);
-  cursor: default;
-  text-align: center;
-  transition: var(--transition);
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: 1px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
 }
 
 #logo:hover {
-  box-shadow: 0 0 30px var(--primary-cyan);
   transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.8);
 }
 
-/* Header styling */
 #header {
   box-sizing: border-box;
-  height: 60px;
-  top: 0;
-  right: 0;
+  height: 70px;
   width: 100%;
-  padding: 1rem;
+  padding: 0 2rem;
   display: flex;
-  box-shadow: 0 4px 20px var(--primary-cyan);
-  border: 2px solid var(--primary-cyan);
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, 
-    rgba(21, 114, 5, 0.9) 0%, 
-    rgba(21, 114, 5, 0.9) 50%, 
-    rgba(3, 0, 18, 0.9) 100%);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(21, 114, 5, 0.95), rgba(3, 0, 18, 0.95));
+  backdrop-filter: blur(15px);
+  border-bottom: 2px solid var(--primary-cyan);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
-/* Menu styling */
+#header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
 #menu {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
@@ -82,181 +78,172 @@ ul {
   font-size: 16px;
   color: var(--text-light);
   text-decoration: none;
-  transition: var(--transition);
   font-weight: 600;
-  padding: 10px 20px;
-  border-radius: var(--border-radius);
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: 1px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#menu a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #00FFFF33, #32CD32);
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: -1;
 }
 
 #menu a:hover {
-  color: var(--primary-cyan);
-  text-shadow: 0 0 10px var(--primary-cyan);
-  background: rgba(0, 255, 255, 0.1);
+  color: var(--text-light);
   transform: translateY(-2px);
 }
 
-#menu a.aqui, #menu a.here {
-  color: var(--primary-lime);
-  background: rgba(0, 255, 0, 0.2);
-  text-shadow: 0 0 10px var(--primary-lime);
-  border: 1px solid var(--primary-lime);
+#menu a:hover::before {
+  opacity: 1;
+  transform: scale(1);
 }
 
-/* Mobile menu button */
+#menu a.aqui {
+  background: linear-gradient(135deg, #00FFFF33, #32CD32);
+  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
+
 #btn-mobile {
   display: none;
-  background: transparent;
+  background: none;
   border: none;
-  cursor: pointer;
+  color: var(--text-light);
   padding: 10px;
+  cursor: pointer;
   border-radius: 8px;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 #btn-mobile:hover {
-  background: rgba(0, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
 }
 
-/* Hamburger icon */
 #hambuguer {
-  border-top: 3px solid var(--text-light);
   width: 25px;
-  transition: var(--transition);
+  height: 2px;
+  background: var(--text-light);
   display: block;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-#hambuguer:hover {
-  color: var(--primary-cyan);
-}
-
-#hambuguer::before, 
+#hambuguer::before,
 #hambuguer::after {
   content: '';
   display: block;
   width: 25px;
-  height: 3px;
-  background-color: currentColor;
-  margin-top: 6px;
-  transition: var(--transition);
-  position: relative;
+  height: 2px;
+  background: var(--text-light);
+  position: absolute;
+  transition: all 0.3s ease;
 }
 
-/* Active hamburger animation */
+#hambuguer::before {
+  top: -8px;
+}
+
+#hambuguer::after {
+  top: 8px;
+}
+
+/* Mobile menu animations */
 #nav.active #hambuguer {
-  border-top-color: transparent;
+  background: transparent;
 }
 
 #nav.active #hambuguer::before {
-  transform: rotate(135deg);
-  background-color: var(--primary-cyan);
+  transform: rotate(45deg);
+  top: 0;
 }
 
 #nav.active #hambuguer::after {
-  transform: rotate(-135deg);
-  top: -9px;
-  background-color: var(--primary-cyan);
+  transform: rotate(-45deg);
+  top: 0;
 }
+
+/*-------------------------------------------*/
 
 /* Mobile responsive design */
 @media screen and (max-width: 768px) {
-  #btn-mobile {
-    display: block;
+  #header {
+    padding: 0 1rem;
+    height: 60px;
   }
   
   #logo {
-    font-size: 16px;
-    width: 100px;
-    padding: 10px 15px;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 15px;
   }
   
-  #header {
-    height: 70px;
-    padding: 0.8rem;
+  #btn-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   #menu {
-    position: absolute;
-    width: 100%;
-    top: 70px;
+    position: fixed;
+    top: 60px;
+    left: 0;
     right: 0;
-    display: block;
-    background: linear-gradient(180deg, 
-      rgba(21, 114, 5, 0.95) 0%,
-      rgba(3, 0, 18, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(4, 4, 146, 0.95));
     backdrop-filter: blur(15px);
+    flex-direction: column;
+    gap: 0;
     height: 0;
-    z-index: 1000;
-    transition: var(--fast-transition); /* Fast transition for mobile menu */
     visibility: hidden;
-    overflow-y: hidden;
-    border-left: 2px solid var(--primary-cyan);
-    border-right: 2px solid var(--primary-cyan);
+    overflow: hidden;
+    transition: all 0.2s ease;
     border-bottom: 2px solid var(--primary-cyan);
-    border-radius: 0 0 20px 20px;
   }
   
   #nav.active #menu {
-    display: block;
+    height: auto;
+    min-height: 200px;
     visibility: visible;
-    height: calc(100vh - 70px);
-    overflow-y: auto;
-    animation: slideDown var(--fast-transition) ease;
   }
   
   #menu a {
-    padding: 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-bottom: 2px solid rgba(0, 255, 255, 0.2);
-    background: linear-gradient(to right, transparent, rgba(0, 255, 255, 0.1), transparent);
-    width: 100%;
-    display: block;
-    text-align: center;
-    margin: 0;
+    padding: 20px 30px;
+    font-size: 18px;
     border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideInDown 0.3s ease forwards;
+  }
+  
+  #menu li:nth-child(1) a { animation-delay: 0.1s; }
+  #menu li:nth-child(2) a { animation-delay: 0.2s; }
+  #menu li:nth-child(3) a { animation-delay: 0.3s; }
+  
+  @keyframes slideInDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   #menu a:hover {
-    background: linear-gradient(to right, transparent, rgba(0, 255, 255, 0.3), transparent);
-    color: var(--primary-cyan);
-    transform: none;
-  }
-  
-  #menu a.aqui, #menu a.here {
-    background: linear-gradient(to right, transparent, rgba(0, 255, 0, 0.3), transparent);
-    color: var(--primary-lime);
-    border-bottom-color: var(--primary-lime);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Even smaller screens */
-@media screen and (max-width: 480px) {
-  #logo {
-    font-size: 14px;
-    width: 90px;
-    padding: 8px 12px;
-  }
-  
-  #header {
-    padding: 0.5rem;
-  }
-  
-  #menu a {
-    padding: 18px;
-    font-size: 15px;
+    background: linear-gradient(135deg, #00FFFF33, #32CD32);
+    transform: translateY(0) scale(1.05);
   }
 }

@@ -94,7 +94,7 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, var(--primary-cyan), var(--primary-lime));
+  background: linear-gradient(135deg, #00FFFF33, #32CD32);
   border-radius: 20px;
   opacity: 0;
   transform: scale(0.8);
@@ -103,7 +103,7 @@ ul {
 }
 
 #menu a:hover {
-  color: var(--text-primary);
+  color: var(--text-light);
   transform: translateY(-2px);
 }
 
@@ -113,8 +113,8 @@ ul {
 }
 
 #menu a.aqui {
-  background: linear-gradient(135deg, var(--primary-cyan), var(--primary-lime));
-  color: var(--text-primary);
+  background: linear-gradient(135deg, #00FFFF33, #32CD32);
+  color: var(--text-light);
   box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
 }
 
@@ -206,7 +206,6 @@ ul {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(4, 4, 146, 0.95));
     backdrop-filter: blur(15px);
     flex-direction: column;
-    padding: 20px 0;
     gap: 0;
     height: 0;
     visibility: hidden;
@@ -244,7 +243,7 @@ ul {
   }
   
   #menu a:hover {
-    background: linear-gradient(135deg, var(--primary-cyan), var(--primary-lime));
+    background: linear-gradient(135deg, #00FFFF33, #32CD32);
     transform: translateY(0) scale(1.05);
   }
 }

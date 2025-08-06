@@ -34,6 +34,7 @@ html {
   font-size: 16px;
   line-height: 1.6;
   scroll-behavior: smooth;
+  filter: hue-rotate(30deg);
 }
 
 body {
@@ -125,6 +126,7 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin: 10px;
 }
 
 .dropbtn {
@@ -140,18 +142,21 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: 'Orbitron', sans-serif;
+  border: 1px solid rgba(0, 255, 26, 0.3);
 }
 
 .dropbtn:hover {
   background: linear-gradient(135deg, #00AA00, var(--primary-lime));
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
+  color: var(--background-primary);
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 75%;
   left: 50%;
   transform: translateX(-50%);
   background: var(--background-dark);
@@ -180,8 +185,8 @@ body {
 }
 
 .dropdown-content a:hover {
-  background: linear-gradient(135deg, var(--primary-lime), var(--primary-cyan));
-  color: var(--text-primary);
+  background: linear-gradient(135deg, #32CD32, #00FFFF33);
+  color: var(--text-light) !important;
   transform: translateX(5px);
 }
 
@@ -292,7 +297,7 @@ button:hover, .cta-button:hover {
   line-height: 1.8;
   margin: 20px auto;
   max-width: 900px;
-  text-align: left;
+  text-align: center;
 }
 
 #A1 {
@@ -379,7 +384,7 @@ a:hover {
 
 /* Footer */
 .site-footer {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(4, 4, 146, 0.8));
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(4, 146, 32, 0.8));
   backdrop-filter: blur(10px);
   padding: 40px 20px;
   text-align: center;
@@ -393,6 +398,7 @@ a:hover {
   line-height: 1.6;
   margin: 10px auto;
   max-width: 900px;
+  text-align: center;
 }
 
 /* Responsive design */
