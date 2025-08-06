@@ -211,7 +211,7 @@ ul {
     height: 0;
     visibility: hidden;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     border-bottom: 2px solid var(--primary-cyan);
   }
   
