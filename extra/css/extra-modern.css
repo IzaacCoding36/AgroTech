@@ -1,4 +1,4 @@
-/* AgroTech - Modern Design */
+/* AgroTech Extra Pages - Modern Design */
 
 /*-------------------------------------------*/
 
@@ -9,7 +9,7 @@
   --primary-lime: #00FF00;
   --primary-blue: #0000FF;
   --dark-blue: #040492;
-  --background-primary: #fcf4b3e7;
+  --background-primary: #c2eea9e7;
   --background-dark: #000000aa;
   --text-primary: #000000;
   --text-light: #ffffff;
@@ -52,28 +52,9 @@ body {
   flex: 1;
 }
 
-/* Hero section */
-.hero {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.controls-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 30px 0;
-}
-
-.intro {
-  max-width: 800px;
-  margin: 40px auto;
-}
-
 /* Content sections */
 .content-section {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   text-align: center;
 }
 
@@ -96,27 +77,47 @@ body {
 
 .text-content {
   max-width: 100%;
+  text-align: left;
+}
+
+.text-content p {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+.text-content a {
+  color: var(--primary-cyan);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.text-content a:hover {
+  color: var(--primary-lime);
+  text-shadow: 0 0 5px var(--primary-lime);
 }
 
 /* Modern section dividers */
 .section-divider {
   height: 2px;
-  background: linear-gradient(to right, transparent, var(--primary-cyan), transparent);
+  background: linear-gradient(to right, transparent, var(--primary-lime), transparent);
   border: none;
   margin: 40px auto;
   max-width: 600px;
   border-radius: 2px;
-  box-shadow: 0 0 10px var(--primary-cyan);
+  box-shadow: 0 0 10px var(--primary-lime);
   animation: pulse 3s infinite;
 }
 
 @keyframes pulse {
   0%, 100% { 
-    box-shadow: 0 0 5px var(--primary-cyan);
+    box-shadow: 0 0 5px var(--primary-lime);
     opacity: 0.7;
   }
   50% { 
-    box-shadow: 0 0 20px var(--primary-cyan);
+    box-shadow: 0 0 20px var(--primary-lime);
     opacity: 1;
   }
 }
@@ -125,6 +126,7 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin: 10px;
 }
 
 .dropbtn {
@@ -140,6 +142,7 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .dropbtn:hover {
@@ -165,7 +168,7 @@ body {
 }
 
 .dropdown-content a {
-  color: var(--text-light);
+  color: var(--text-light) !important;
   padding: 15px 20px;
   font-size: 14px;
   font-weight: 500;
@@ -173,6 +176,7 @@ body {
   display: block;
   transition: var(--transition);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 
 .dropdown-content a:last-child {
@@ -181,7 +185,7 @@ body {
 
 .dropdown-content a:hover {
   background: linear-gradient(135deg, var(--primary-lime), var(--primary-cyan));
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   transform: translateX(5px);
 }
 
@@ -201,57 +205,40 @@ body {
   }
 }
 
-/* Modern button styling */
-button, .cta-button {
-  background: linear-gradient(135deg, var(--text-primary), #333);
-  color: var(--text-light);
-  border: none;
-  border-radius: var(--border-radius);
-  padding: 15px 25px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 4px 15px var(--shadow-color);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-button:hover, .cta-button:hover {
-  background: linear-gradient(135deg, var(--primary-lime), #66ff66);
-  color: var(--text-primary);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px var(--shadow-color);
-}
-
-.external-link {
-  text-decoration: none;
+/* Controls wrapper */
+.controls-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0;
 }
 
 /* Typography improvements */
-.T1 {
-  color: var(--primary-cyan);
+h1 {
+  color: var(--primary-lime);
   background: var(--background-dark);
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 30px var(--primary-cyan);
+  box-shadow: 0 0 30px var(--primary-lime);
   text-shadow: 0 0 20px var(--primary-blue);
   padding: 25px 40px;
   margin: 0 auto 40px;
   width: 90%;
   max-width: 900px;
   border-radius: var(--border-radius);
-  border: 2px solid var(--primary-cyan);
+  border: 2px solid var(--primary-lime);
   font-size: clamp(24px, 4vw, 36px);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.T2, .T3, .T4 {
+h2 {
+  color: var(--primary-cyan);
+  background: var(--dark-blue);
   padding: 20px 30px;
-  margin: 0 auto 30px;
+  margin: 40px auto 30px;
   width: 80%;
   max-width: 700px;
   border-radius: var(--border-radius);
@@ -259,182 +246,66 @@ button:hover, .cta-button:hover {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-.T2 {
-  color: var(--primary-yellow);
-  background: var(--dark-blue);
-  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.3);
-  text-shadow: 0 0 15px orange;
-  border: 2px solid var(--primary-yellow);
-}
-
-.T3 {
-  color: var(--text-light);
-  background: var(--dark-blue);
+  text-align: center;
   box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
   text-shadow: 0 0 15px var(--primary-cyan);
-  border: 2px solid var(--text-light);
+  border: 2px solid var(--primary-cyan);
 }
 
-.T4 {
-  color: var(--primary-lime);
-  background: var(--dark-blue);
-  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
-  text-shadow: 0 0 15px var(--text-light);
-  border: 2px solid var(--primary-lime);
-}
-
-/* Text styling */
-#A1, #Te1 {
-  color: var(--text-primary);
-  font-size: 16px;
-  line-height: 1.8;
-  margin: 20px auto;
-  max-width: 900px;
-  text-align: left;
-}
-
-#A1 {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-/* List styling */
-.benefits-list {
-  text-align: left;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0;
-}
-
-.Topicos {
-  color: var(--text-primary);
-  font-size: 16px;
-  line-height: 1.8;
-  margin: 20px 0;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  border-left: 4px solid var(--primary-cyan);
+/* Copyright section */
+.copyright {
+  margin-top: 60px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
-  transition: var(--transition);
-}
-
-.Topicos:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
-}
-
-/* Image styling */
-#I1, #I2, #I3 {
-  width: min(400px, 80%);
-  height: auto;
   border-radius: var(--border-radius);
-  transition: var(--transition);
-  border: 3px solid var(--text-primary);
-  margin: 30px auto;
-  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#I1 {
-  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.4);
-}
-
-#I2 {
-  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
-}
-
-#I3 {
-  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.4);
-}
-
-#I1:hover, #I2:hover, #I3:hover {
-  filter: brightness(1.1) contrast(1.1);
-  transform: scale(1.02);
-  box-shadow: 0 12px 40px var(--shadow-color);
-}
-
-/* Link styling */
-a {
-  color: var(--primary-cyan);
-  transition: var(--transition);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--primary-lime);
-  text-shadow: 0 0 5px currentColor;
-}
-
-.links {
-  color: var(--primary-blue);
-  font-weight: 500;
-}
-
-.links:hover {
-  color: var(--primary-lime);
-}
-
-/* Footer */
-.site-footer {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(4, 4, 146, 0.8));
-  backdrop-filter: blur(10px);
-  padding: 40px 20px;
-  text-align: center;
-  margin-top: auto;
-  border-top: 2px solid var(--primary-cyan);
-}
-
-#Te2 {
-  color: var(--text-light);
+.copyright p {
   font-size: 14px;
-  line-height: 1.6;
-  margin: 10px auto;
-  max-width: 900px;
+  color: var(--text-primary);
+  margin: 0;
+  text-align: center;
 }
 
 /* Responsive design */
-@media screen and (max-width: 768px) {
-  html {
-    background-size: 200%;
-    font-size: 14px;
-  }
-  
+@media (max-width: 768px) {
   .container {
     padding: 80px 15px 15px;
+  }
+  
+  .content-card {
+    padding: 25px;
+    margin: 20px auto;
   }
   
   .controls-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+  }
+  
+  .dropdown {
+    margin: 8px;
+    width: 100%;
+    max-width: 250px;
   }
   
   .dropbtn {
-    padding: 10px 15px;
-    font-size: 12px;
-    width: 200px;
-  }
-  
-  .T1, .T2, .T3, .T4 {
-    border-radius: 10px;
-    padding: 15px 20px;
-  }
-  
-  .content-card {
-    padding: 20px;
-    margin: 20px 10px;
-  }
-  
-  #I1, #I2, #I3 {
-    width: 90%;
-    border-radius: 10px;
-  }
-  
-  .Topicos {
+    width: 100%;
     padding: 15px;
-    margin: 15px 0;
   }
+}
+
+/* Filter classes for JavaScript functionality */
+.filter-sepia {
+  filter: sepia(100%) !important;
+}
+
+.filter-grayscale {
+  filter: grayscale(100%) !important;
+}
+
+.filter-normal {
+  filter: none !important;
 }

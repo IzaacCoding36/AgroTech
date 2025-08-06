@@ -1,0 +1,262 @@
+/* Header AgroTech - Modern Menu */
+
+/*-------------------------------------------*/
+
+/* CSS Variables for consistent styling */
+:root {
+  --primary-cyan: #00FFFF;
+  --primary-lime: #00FF00;
+  --primary-blue: #0000FF;
+  --text-light: #ffffff;
+  --background-dark: #000000aa;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --border-radius: 20px;
+  --transition: all 0.3s ease;
+  --fast-transition: 0.2s; /* Fast menu transition */
+}
+
+ul {
+  margin: 0;
+}
+
+/* Logo styling */
+#logo {
+  font-size: 18px;
+  font-weight: bold;
+  background: var(--background-dark);
+  backdrop-filter: blur(10px);
+  color: var(--primary-cyan);
+  text-shadow: 0 0 15px var(--primary-blue);
+  width: 120px;
+  padding: 12px 20px;
+  box-shadow: 0 0 20px var(--primary-cyan);
+  border-radius: 50px;
+  border: 2px solid var(--primary-cyan);
+  cursor: default;
+  text-align: center;
+  transition: var(--transition);
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+#logo:hover {
+  box-shadow: 0 0 30px var(--primary-cyan);
+  transform: scale(1.05);
+}
+
+/* Header styling */
+#header {
+  box-sizing: border-box;
+  height: 60px;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  box-shadow: 0 4px 20px var(--primary-cyan);
+  border: 2px solid var(--primary-cyan);
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, 
+    rgba(21, 114, 5, 0.9) 0%, 
+    rgba(21, 114, 5, 0.9) 50%, 
+    rgba(3, 0, 18, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+/* Menu styling */
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+#menu a {
+  display: block;
+  font-size: 16px;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#menu a:hover {
+  color: var(--primary-cyan);
+  text-shadow: 0 0 10px var(--primary-cyan);
+  background: rgba(0, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+#menu a.aqui, #menu a.here {
+  color: var(--primary-lime);
+  background: rgba(0, 255, 0, 0.2);
+  text-shadow: 0 0 10px var(--primary-lime);
+  border: 1px solid var(--primary-lime);
+}
+
+/* Mobile menu button */
+#btn-mobile {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+#btn-mobile:hover {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+/* Hamburger icon */
+#hambuguer {
+  border-top: 3px solid var(--text-light);
+  width: 25px;
+  transition: var(--transition);
+  display: block;
+}
+
+#hambuguer:hover {
+  color: var(--primary-cyan);
+}
+
+#hambuguer::before, 
+#hambuguer::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: currentColor;
+  margin-top: 6px;
+  transition: var(--transition);
+  position: relative;
+}
+
+/* Active hamburger animation */
+#nav.active #hambuguer {
+  border-top-color: transparent;
+}
+
+#nav.active #hambuguer::before {
+  transform: rotate(135deg);
+  background-color: var(--primary-cyan);
+}
+
+#nav.active #hambuguer::after {
+  transform: rotate(-135deg);
+  top: -9px;
+  background-color: var(--primary-cyan);
+}
+
+/* Mobile responsive design */
+@media screen and (max-width: 768px) {
+  #btn-mobile {
+    display: block;
+  }
+  
+  #logo {
+    font-size: 16px;
+    width: 100px;
+    padding: 10px 15px;
+  }
+  
+  #header {
+    height: 70px;
+    padding: 0.8rem;
+  }
+  
+  #menu {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0;
+    display: block;
+    background: linear-gradient(180deg, 
+      rgba(21, 114, 5, 0.95) 0%,
+      rgba(3, 0, 18, 0.95) 100%);
+    backdrop-filter: blur(15px);
+    height: 0;
+    z-index: 1000;
+    transition: var(--fast-transition); /* Fast transition for mobile menu */
+    visibility: hidden;
+    overflow-y: hidden;
+    border-left: 2px solid var(--primary-cyan);
+    border-right: 2px solid var(--primary-cyan);
+    border-bottom: 2px solid var(--primary-cyan);
+    border-radius: 0 0 20px 20px;
+  }
+  
+  #nav.active #menu {
+    display: block;
+    visibility: visible;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    animation: slideDown var(--fast-transition) ease;
+  }
+  
+  #menu a {
+    padding: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+    background: linear-gradient(to right, transparent, rgba(0, 255, 255, 0.1), transparent);
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  #menu a:hover {
+    background: linear-gradient(to right, transparent, rgba(0, 255, 255, 0.3), transparent);
+    color: var(--primary-cyan);
+    transform: none;
+  }
+  
+  #menu a.aqui, #menu a.here {
+    background: linear-gradient(to right, transparent, rgba(0, 255, 0, 0.3), transparent);
+    color: var(--primary-lime);
+    border-bottom-color: var(--primary-lime);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Even smaller screens */
+@media screen and (max-width: 480px) {
+  #logo {
+    font-size: 14px;
+    width: 90px;
+    padding: 8px 12px;
+  }
+  
+  #header {
+    padding: 0.5rem;
+  }
+  
+  #menu a {
+    padding: 18px;
+    font-size: 15px;
+  }
+}
